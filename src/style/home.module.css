@@ -1,0 +1,10 @@
+.Background {
+    background-image: url(../../public/backgrounddnd.jpg);
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Card {
+    padding: 50px;
+}
