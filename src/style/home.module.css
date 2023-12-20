@@ -8,3 +8,8 @@
 .Card {
     padding: 50px;
 }
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}

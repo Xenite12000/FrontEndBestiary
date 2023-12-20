@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarBesitary from '../components/navbar';
-import Cardbeast from '../components/cardbeast';
 import homestyle from '../style/home.module.css';
+import Product from '../Bdd/Product';
 
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
           <NavbarBesitary />
         </div>
         <div className={homestyle['Card']}>
-          <Cardbeast />
+          <Product />
         </div>
       </React.StrictMode>
     </div>

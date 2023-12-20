@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import ProductItem from './ProductItem';
-import classes from "./Products.module.css";
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
+import Cardbeast from '../components/cardbeast';
+import classes from '../style/home.module.css';
 
-function Products() {
+function Product() {
   const [loading, setLoading]= useState(true);
   const [data, setData] = useState([]);
   const [errorBackend, setErrorBackend]= useState(false); // not sure for this line
 
   useEffect(()=>{
     axios
-      .get('http://localhost:9090/beasts') // original => localhost:3000
+      .get('https://bestiary.onrender.com/beasts')
       // handle success
-      .then((response) => setData(response.data.products))
+      .then((response) => setData(response.data))
       // handle error
       .catch((error) => setErrorBackend(true), setLoading(false))
       //.finally(() => setLoading(true))
@@ -24,7 +24,7 @@ function Products() {
   if(loading){
     return(
       <>
-      <section className={classes.Product}>
+      <section>
         <Button variant="primary" disabled>
           <Spinner
             as="span"
@@ -43,7 +43,7 @@ function Products() {
   if(errorBackend){ 
     return(
       <>
-      <section className={classes.Product}>
+      <section>
         <Alert variant="danger">
           <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
             <p>Network Error</p>
@@ -53,25 +53,24 @@ function Products() {
     )
   }
   
-  const quantity=0;
   const newArrayProduct = data.map((item) =>
-      < ProductItem 
-        key={item.id}
-        id={item.id}
-        title={item.name}
-        description={item.description}
-        img={item.image}
-        univers={item.univers}
+      < Cardbeast
+        key={item.idBeast}
+        id={item.idBeast}
+        name={item.nameBeast}
+        img={item.imgBeast}
+        description={item.descriptionBeast}
+
       />
     )
     
   return (
     <>
-    <section className={classes.products}>
+    <section  className={classes.products}>
        {newArrayProduct} 
     </section>
     </>
   )
 }
 
-export default Products
+export default Product
