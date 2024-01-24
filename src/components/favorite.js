@@ -11,6 +11,10 @@ function Cardfavorite(props) {
   const { maVariable, setVariable } = useVariable();
   const [error, setError] = useState(null);
 
+  if(maVariable === 0) {
+    window.location.href = "/Login";
+  }
+
 
   const DeleteFavorite = async (idbeast) => {
     try {
