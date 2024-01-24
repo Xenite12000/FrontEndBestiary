@@ -1,7 +1,7 @@
-import Favorite from "../components/favorite";
 import React from 'react';
 import homestyle from '../style/home.module.css';
 import NavbarBesitary from "../components/navbar";
+import BeastFavorite from "../Bdd/BeastFavorite";
 
 
 function FavoriteList() {
@@ -10,7 +10,7 @@ function FavoriteList() {
     <div className={homestyle['Background']}>
         <NavbarBesitary />
         <div className={homestyle['Card']}>
-            <Favorite />
+            <BeastFavorite />
         </div>
     </div>
     </>

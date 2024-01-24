@@ -55,9 +55,11 @@ function Login() {
             setVariable(item.idUser)
           }
       }
-  })
+    })
+  };
 
-    
+  const GoBack = () => {
+    window.location.href = "/Home";
   };
 
   return (
@@ -75,8 +77,11 @@ function Login() {
           <Form.Control type="password" placeholder="Password" id="pwenter" />
         </Form.Group>
 
-        <Button variant="primary" onClick={handleConnect} style={{ marginTop: "10px"}}>
+        <Button variant="primary" onClick={handleConnect} style={{ marginTop: "10px", width: "30%"}}>
           Se connecter
+        </Button>
+        <Button variant="primary" onClick={GoBack} style={{ marginTop: "10px", marginLeft: "50%", width: "20%"}}>
+          Fermer
         </Button>
       </Form>
     </div>
