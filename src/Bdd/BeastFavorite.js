@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import classes from '../style/home.module.css';
-import { useVariable } from '../TestVariable/VariableContext';
+import { useVariable } from '../VariableUser/VariableContext';
 import Cardfavorite from '../components/favorite';
 
 function BeastFavorite() {

@@ -6,7 +6,7 @@ import FavoriteList from './Page/favoritelist';
 import Loginpage from './Page/loginpage';
 import Universepage from './Page/Universepage';
 import BeastsByUniverse from './Page/beastsuniverse';
-import { VariableProvider } from './TestVariable/VariableContext';
+import { VariableProvider } from './VariableUser/VariableContext';
 
 function App() {
   return (

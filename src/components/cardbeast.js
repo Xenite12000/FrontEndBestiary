@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
-import { useVariable } from '../TestVariable/VariableContext';
+import { useVariable } from '../VariableUser/VariableContext';
 import { useState } from 'react';
 
 

@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useVariable } from '../TestVariable/VariableContext';
+import { useVariable } from '../VariableUser/VariableContext';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -21,7 +21,7 @@ function Cardfavorite(props) {
       const response = await axios.delete('https://bestiary.onrender.com/favoris?beast=' + idbeast + '&user=' + maVariable);
 
     } catch (error) {
-      console.log("nooooooooooooooooooon")
+      console.log("non")
     }
     window.location.href = "/favorite"
   }
