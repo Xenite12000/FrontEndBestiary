@@ -12,7 +12,7 @@ function NavbarBesitary() {
 
   const Deco = () => {
     setVariable(0)
-    window.location.href = "/Login";
+    
   }
   
 
