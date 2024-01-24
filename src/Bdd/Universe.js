@@ -3,17 +3,17 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
-import Cardbeast from '../components/cardbeast';
 import classes from '../style/home.module.css';
+import Listuniverse from '../components/listuniverse';
 
-function Product() {
+function Universe() {
   const [loading, setLoading]= useState(true);
   const [data, setData] = useState([]);
   const [errorBackend, setErrorBackend]= useState(false);
 
   useEffect(()=>{
     axios
-      .get('https://bestiary.onrender.com/beasts')
+      .get('https://bestiary.onrender.com/universes')
       // handle success
       .then((response) => setData(response.data))
       // handle error
@@ -54,12 +54,11 @@ function Product() {
   }
   
   const newArrayProduct = data.map((item) =>
-      < Cardbeast
-        key={item.idBeast}
-        id={item.idBeast}
-        name={item.nameBeast}
-        img={item.imgBeast}
-        description={item.descriptionBeast}
+      < Listuniverse
+        key={item.idUniverse}
+        id={item.idUniverse}
+        name={item.nameUniverse}
+        img={item.imgUniverse}
 
       />
     )
@@ -73,4 +72,4 @@ function Product() {
   )
 }
 
-export default Product
+export default Universe

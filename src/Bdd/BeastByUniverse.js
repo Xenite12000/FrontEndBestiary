@@ -6,14 +6,21 @@ import axios from 'axios';
 import Cardbeast from '../components/cardbeast';
 import classes from '../style/home.module.css';
 
-function Product() {
+function BeastByUniverse() {
   const [loading, setLoading]= useState(true);
   const [data, setData] = useState([]);
   const [errorBackend, setErrorBackend]= useState(false);
+  
+  const currentUrl = window.location.href;
+
+  // Extraire le numéro après le signe de hash (#)
+  const match = currentUrl.match(/#(\d+)$/);
+  
+  const universeselected = match[1];
 
   useEffect(()=>{
     axios
-      .get('https://bestiary.onrender.com/beasts')
+      .get('https://bestiary.onrender.com/beasts?universe=' + universeselected)
       // handle success
       .then((response) => setData(response.data))
       // handle error
@@ -73,4 +80,4 @@ function Product() {
   )
 }
 
-export default Product
+export default BeastByUniverse
