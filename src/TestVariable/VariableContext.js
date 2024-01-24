@@ -5,7 +5,7 @@ const VariableContext = createContext();
 export const VariableProvider = ({ children }) => {
   const [maVariable, setMaVariable] = useState(() => {
     const storedVariable = localStorage.getItem('maVariable');
-    return storedVariable ? JSON.parse(storedVariable) : null;
+    return storedVariable ? JSON.parse(storedVariable) : 0;
   });
 
   const setVariable = (value) => {

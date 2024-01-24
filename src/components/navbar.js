@@ -12,7 +12,6 @@ function NavbarBesitary() {
 
   const Deco = () => {
     setVariable(0)
-    
   }
   
 
