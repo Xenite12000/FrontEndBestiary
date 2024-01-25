@@ -1,3 +1,7 @@
+Ce projet est dédié à la création du front-end et le lien avec le back-end pour une mise en ligne. Ce projet a pour but de créer un site web qui permet de répertorier plein de créatures de plusieurs univers différents.
+React est utilisé pour la partie front-end et axios est utilisé pour les requêtes. Pour la mise en ligne Vercel a été privilégié.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
